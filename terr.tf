@@ -6,7 +6,8 @@
   }
   }
   
-
+backend "azurerm" {
+  }
  
      
 provider "azurerm" {
