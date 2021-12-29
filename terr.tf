@@ -1,5 +1,13 @@
 variable "rg1" {
 }
+variable "subs" {
+}
+variable "client" {
+}
+variable "secret" {
+}
+variable "ten" {
+}
 
 terraform {
   required_providers {
@@ -16,7 +24,7 @@ provider "azurerm" {
  
   subscription_id = var.subs
   client_id       = var.client
-  client_secret   = var.client_secret
+  client_secret   = var.secret
   tenant_id       = var.ten
 }
 
