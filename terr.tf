@@ -1,14 +1,3 @@
-variable "rg1" {
-}
-variable "subs" {
-}
-variable "client" {
-}
-variable "secret" {
-}
-variable "ten" {
-}
-
 terraform {
   required_providers {
     azurerm = {
@@ -31,7 +20,7 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "rg" {
-  name     = var.rg1
+  name     = "created via jenkins"
   location = "westus2"
 }
 
