@@ -1,9 +1,5 @@
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      
-    }
+   backend "azurerm" {
   }
 }
 
@@ -14,10 +10,7 @@ provider "azurerm" {
 
 }
 
- backend "remote" {
-   organization = "RJ_Bagawathy"
-   workspaces {
-     name = "Example-Workspace"
+
 
 
 
