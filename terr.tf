@@ -1,24 +1,38 @@
+variable "rg1" {
+}
+
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       
     }
   }
-
-  
 }
 
 provider "azurerm" {
-  features {}
+  features {}  
+
+ 
+  subscription_id = var.subs
+  client_id       = var.client
+  client_secret   = var.client_secret
+  tenant_id       = var.ten
 }
+
+
 
 resource "azurerm_resource_group" "rg" {
-  name     = "pope"
+  name     = var.rg1
   location = "westus2"
 }
 
-resource "azurerm_resource_group" "rg1" {
-  name     = "pope1"
-  location = "westus2"
+resource "azurerm_virtual_network" "vnet" {
+    name                = "myTFVnet"
+    address_space       = ["10.0.0.0/16"]
+    location            = "westus2"
+    resource_group_name = var.rg1
 }
+
+
+
