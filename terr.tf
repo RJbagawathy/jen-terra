@@ -17,7 +17,7 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "rg" {
-  name     = "created via jenkins"
+  name     = "created_via_jenkins"
   location = "westus2"
 }
 
@@ -25,7 +25,7 @@ resource "azurerm_virtual_network" "vnet" {
     name                = "myTFVnet"
     address_space       = ["10.0.0.0/16"]
     location            = "westus2"
-    resource_group_name = var.rg1
+    resource_group_name = "created_via_jenkins"
 }
 
 
