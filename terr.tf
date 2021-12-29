@@ -14,6 +14,12 @@ provider "azurerm" {
 
 }
 
+ backend "remote" {
+   organization = "RJ_Bagawathy"
+   workspaces {
+     name = "Example-Workspace"
+
+
 
 
 resource "azurerm_resource_group" "rg" {
