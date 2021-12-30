@@ -1,3 +1,15 @@
+variable "subs" {
+}
+variable "cid" {
+}
+variable "csec" {
+}
+variable "tid" {
+}
+
+
+
+
 terraform {
   backend "azurerm" {
         resource_group_name  = "jenkins-get-started-rg1"
@@ -10,7 +22,12 @@ terraform {
 
   
 provider "azurerm" {
-  features {}  
+  features {} 
+  
+  subscription_id = var.subs
+  client_id       = var.cid
+  client_secret   = var.csec
+  tenant_id       = var.tid
 }
 
 
