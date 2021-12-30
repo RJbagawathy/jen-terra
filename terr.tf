@@ -1,11 +1,7 @@
-variable "subs" {
-}
-variable "cid" {
-}
+
 variable "csec" {
 }
-variable "tid" {
-}
+
 
 
 
@@ -24,10 +20,10 @@ terraform {
 provider "azurerm" {
   features {} 
   
-  subscription_id = var.subs
-  client_id       = var.cid
+  subscription_id = "11053afc-3c4e-4207-a817-c33c75b65866"
+  client_id       ="8ae49cf9-7c95-4e0b-a7c3-e8056415aa7e"
   client_secret   = var.csec
-  tenant_id       = var.tid
+  tenant_id       = "d518bac2-5294-4997-aa33-d4f6fd3a4844"
 }
 
 
