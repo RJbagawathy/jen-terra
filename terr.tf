@@ -6,7 +6,12 @@ terraform {
   }
   }
 
-
+backend "azurerm" {
+        resource_group_name  = "jenkins-get-started-rg1"
+        storage_account_name = "jenkinterra"
+        container_name       = "jtcon"
+        key                  = "terraform.tfstate"
+ }
      
 provider "azurerm" {
   features {}  
